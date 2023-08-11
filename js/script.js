@@ -8,17 +8,20 @@ async function renderData() {
     console.log(indicators)
     valores = indicators.serie.map(indicator => indicator.valor)
     console.log(valores)
-    fechas = indicators.serie.map(indicator => indicator.fecha)
-    console.log(fechas)
+    fechas = indicators.serie.map(indicator => {
+        const isoDate = new Date(indicator.fecha).toISOString();
+        return isoDate.slice(0, 10); // Obtiene solo la parte de la fecha (YYYY-MM-DD)
+    });
 
-
+    const primerasFechas = fechas.slice(0, 7);
+    console.log(primerasFechas);
 
     const ctx = document.getElementById('myChart');
 
     new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['fecha'],
+            labels: primerasFechas,
             datasets: [{
                 label: 'Valores de la Unidad de fomento en Chile',
                 data: valores,
