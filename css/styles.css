@@ -1,0 +1,66 @@
+body{
+    background-color: #FCF3CF;
+}
+#title{
+    display: grid;
+    grid-template-columns: 8% 92%;
+    gap: 0%;
+    padding: 20px;
+}
+
+#diarioFinanciero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}   
+
+
+
+img{
+    width: 70px;
+}
+
+#diario{
+    margin-right: 10px;
+    color: black;
+}
+
+#financiero{
+    color:  #EB984E;
+}
+
+#grafico-UF{
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+#grafico-UF p{
+text-align: justify;
+}
+
+#grafico-UTM{
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+#grafico-UTM p{
+    text-align: justify;
+}
+
+#grafico-tasaDesempleo{
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+#grafico-tasaDesempleo p {
+    text-align: justify;
+}

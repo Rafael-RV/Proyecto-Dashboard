@@ -6,29 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diario financiero</title>
 
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+
     <!--custom CSS-->
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
+    <div id="title">
+        <div id="logo">
+            <img src="img/diarioFinanciero.png" alt="logo-empresarial">
+        </div>
+        <div id="diarioFinanciero">
+            <h1 id="diario">Diario</h1>
+            <h1 id="financiero">Financiero</h1>
+        </div>
 
-    <h1>DIARIO FINANCIERO</h1>
+    </div>
 
     <!--Indicador de la Uf (Unidad de Fomento en Chile)-->
-    <div>
-        <canvas id="indicador-UF"></canvas>
+    <div id="grafico-UF">
+        <div>
+            <h3>La Unidad de Fomento (UF)</h3>
+            <p> Es una medida monetaria empleada para indicar el
+                valor del dinero a lo largo del tiempo. Está vinculada al Índice de Precios
+                al Consumidor (IPC), lo que significa que el valor se ajusta con base en la
+                inflación, además de que permite hacer proyecciones y estimar el impacto real
+                de los cambios monetarios.</p>
+        </div>
+
+        <div>
+            <canvas id="indicador-UF"></canvas>
+        </div>
     </div>
+
 
     <!--Indicador de la UTM (Unidad Tributaria Mensual)-->
-    <div>
-        <canvas id="indicador-UTM"></canvas>
+    <div id="grafico-UTM">
+        <div>
+            <h3>Unidad Tributaria Mensual (UTM)</h3>
+            <p>es una unidad de cuenta usada en Chile para efectos tributarios y de multas,
+                actualizada según la inflación. Fue creada el 31 de diciembre de 1974 mediante
+                el artículo 8.º del decreto ley 830. Inicialmente, fue una medida tributaria
+                usada por el Servicio de Impuestos Internos</p>
+        </div>
+
+        <div>
+            <canvas id="indicador-UTM"></canvas>
+        </div>
     </div>
 
+
     <!--Indicadores de la Tasa de desempleo-->
-    <div>
-        <canvas id="indicador-tasaDesempleo"></canvas>
+    <div id="grafico-tasaDesempleo">
+        <div>
+            <h3>Tasa de Desempleo (TD)</h3>
+            <p>Este indicador mide el número de personas desempleadas como porcentaje de la 
+                fuerza laboral y se ajusta de acuerdo a la temporalidad. 
+                La fuerza laboral se define como el número total de personas desempleadas 
+                más aquellas que cuentan con empleo.</p>
+        </div>
+        <div>
+            <canvas id="indicador-tasaDesempleo"></canvas>
+        </div>
     </div>
+
+    <!--Enlace de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Chart.JS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
