@@ -46,7 +46,20 @@ async function renderData() {
                 label: 'Valores de la Unidad de fomento en Chile',
                 // Usa los valores como datos para el eje Y
                 data: valores,
-                borderWidth: 3
+                backgroundColor: [
+                   
+                    'rgba(255, 99, 132, 0.3)',
+                    'rgba(255, 159, 64, 0.3)',
+                    'rgba(255, 205, 86, 0.3)',
+                    'rgba(75, 192, 192, 0.3)',
+                    'rgba(54, 162, 235, 0.3)',
+                    'rgba(153, 102, 255, 0.3)',
+                    'rgba(201, 203, 207, 0.3)'
+                ],
+                borderColor: [
+                    'rgb(255, 99, 132)'],
+
+                borderWidth: 2
             }]
         },
         options: {
@@ -106,7 +119,7 @@ async function renderGraphicsUTM() {
                 label: 'Valores de la Unidad Tributaria en Chile',
                 // Usa los valores de UTM como datos para el eje Y
                 data: utmPrices,
-                borderWidth: 3
+                borderWidth: 2
             }]
         },
         options: {
@@ -140,7 +153,7 @@ async function renderUnemploymentData() {
     });
 
     // Obtiene los 3 fechas formateadas
-    const firstUnemploymentDates = unemploymentDates.slice(0,6 );
+    const firstUnemploymentDates = unemploymentDates.slice(0, 6);
 
     // Obtén el elemento canvas en el HTML
     const ctx = document.getElementById('indicador-tasaDesempleo');
