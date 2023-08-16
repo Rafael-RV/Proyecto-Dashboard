@@ -111,16 +111,26 @@ async function renderGraphicsUTM() {
 
     // Crea un nuevo gráfico utilizando Chart.js para UTM
     new Chart(ctxUTM, {
-        type: 'line',
+        type: 'bar',  // Cambia el tipo a 'bar'
         data: {
-            // Usa las primeras 7 fechas como etiquetas para el eje X
             labels: primerasFechasUTM,
-            datasets: [{
-                label: 'Valores de la Unidad Tributaria en Chile',
-                // Usa los valores de UTM como datos para el eje Y
-                data: utmPrices,
-                borderWidth: 2
-            }]
+            datasets: [
+                {
+                    label: 'Valores de la Unidad Tributaria en Chile',
+                    data: utmPrices,
+                    backgroundColor: 'rgba(255, 99, 132, 0.3)', // Color de fondo para las barras
+                    borderColor: 'rgb(255, 99, 132)', // Color del borde de las barras
+                    borderWidth: 2
+                },
+                {
+                    label: 'Línea de Tendencia',
+                    data: utmPrices, // Puedes usar los mismos datos aquí para la línea
+                    type: 'line', // Cambia el tipo a 'line'
+                    borderColor: 'rgb(54, 162, 235)', // Color del borde de la línea
+                    borderWidth: 2,
+                    fill: false // No rellenar el área debajo de la línea
+                }
+            ]
         },
         options: {
             scales: {
@@ -131,7 +141,6 @@ async function renderGraphicsUTM() {
         }
     });
 }
-
 
 renderGraphicsUTM();
 
