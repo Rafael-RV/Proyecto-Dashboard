@@ -1,66 +1,77 @@
-body{
+body {
     background-color: #FCF3CF;
 }
-#title{
+
+#title {
     display: grid;
     grid-template-columns: 8% 92%;
     gap: 0%;
     padding: 20px;
 }
 
-#diarioFinanciero{
+#diarioFinanciero {
     display: flex;
     flex-direction: row;
     justify-content: center;
-}   
+}
 
 
 
-img{
+img {
     width: 70px;
 }
 
-#diario{
+#diario {
     margin-right: 10px;
     color: black;
 }
 
-#financiero{
-    color:  #EB984E;
+#financiero {
+    color: #EB984E;
 }
 
-#grafico-UF{
+#grafico-UF {
     display: grid;
-    grid-template-columns: 50% 50%; 
-    align-items: center; 
-    gap: 20px; 
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
 }
 
-#grafico-UF p{
-text-align: justify;
-}
-
-#grafico-UTM{
-    display: grid;
-    grid-template-columns: 50% 50%; 
-    align-items: center; 
-    gap: 20px; 
-    padding: 20px;
-}
-
-#grafico-UTM p{
+#grafico-UF p {
     text-align: justify;
 }
 
-#grafico-tasaDesempleo{
+#grafico-UTM {
     display: grid;
-    grid-template-columns: 50% 50%; 
-    align-items: center; 
-    gap: 20px; 
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#grafico-UTM p {
+    text-align: justify;
+}
+
+#grafico-tasaDesempleo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
 }
 
 #grafico-tasaDesempleo p {
     text-align: justify;
+}
+
+/* Media query para pantallas de teléfonos móviles */
+@media (max-width: 770px) {
+    #grafico-UF,
+    #grafico-UTM,
+    #grafico-tasaDesempleo {
+        grid-template-columns: none;
+        display: block;
+    }
 }
